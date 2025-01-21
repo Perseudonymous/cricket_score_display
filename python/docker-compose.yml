@@ -1,0 +1,14 @@
+services:
+  web:
+    image: "cricket_score_server"
+    ports:
+      - "9994:8000"
+    restart: unless-stopped
+    build: .
+  selenium_chrome:
+    image: "selenium/standalone-chrome"
+    ports:
+      - 4444:4444
+      - 7900:7900
+    shm_size: 2gb
+    restart: unless-stopped
