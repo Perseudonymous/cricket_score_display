@@ -25,8 +25,8 @@ def get_scores():
     print('4')
     live_scores_soup = BeautifulSoup(driver.page_source, "lxml")
 
-    score_boxes = live_scores_soup.find_all("div", class_="ds-mb-4")[
-        1
+    score_boxes = live_scores_soup.find_all("div", class_="ds-p-0")[
+        0
     ].find_all("div", class_="ds-text-compact-xxs")
 
     details = []
